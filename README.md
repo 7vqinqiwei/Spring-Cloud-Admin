@@ -62,9 +62,13 @@ Cloud-Admin是国内首个基于`Spring Cloud`微`服务`化`开发平台`，具
 下载完后端代码后，记得先安装`lombok插件`，否则你的IDE会报代码缺失。
 
 ### 运行步骤
-- 运行数据库脚本：依次运行数据库：ace-admin/db/init.sql、ace-auth-server/db/init.sql、ace-trace
+- 运行数据库脚本：依次运行数据库：ace-admin/db/init.sql、ace-auth-server/db/init.sql、ace-trace/db/init.sql
 - 修改配置数据库配置：ace-admin/src/main/resources/application.yml、ace-gate/src/main/resources/application.yml
-- 按`顺序`运行main类：CenterBootstrap（ace-center）、AuthBootstrap（ace-auth-server）、AdminBootstrap（ace-admin）、GatewayServerBootstrap（ace-gateway-v2）
+- 按`顺序`运行main类：
+    CenterBootstrap（ace-center）、
+    AuthBootstrap（ace-auth-server）、
+    AdminBootstrap（ace-admin）、
+    GatewayServerBootstrap（ace-gateway-v2）
 
 ----
 
@@ -82,9 +86,20 @@ npm 版本：3.10.10
     
     # 安装依赖
     npm install
-
-    ## 若上述不行则采取下面命令
+    
+    ###
+    ### 报错了 竟然提示需要Python环境
+    ### 安装了还是报错，提示需要一个VS环境。。。
+    ### 使用npm安装windows build tools 
+    ### npm install --global --production windows-build-tools
+    ### 还是去安装 C:\Users\Administrator\.windows-build-tools\vs_BuildTools.exe.
+    ### npm install node-sass@latest
+    ### cnpm install node-sass@latest
+    ###    
+    
+    ### 若上述不行则采取下面命令
     npm install --registry=https://registry.npm.taobao.org
+    
 
     # 本地开发 开启服务
     npm run dev
